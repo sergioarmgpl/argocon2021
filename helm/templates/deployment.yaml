@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app1
+  name: app1
+  namespace: {{ .Values.namespace }}
+  annotations:
+    kubernetes.io/change-cause: {{ .Values.changeCause }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: app1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: app1
+    spec:
+      containers:
+      - image: {{ .Values.dockerImage }}
+        name: app1
+        env:
+          - name: MESSAGE
+            value: {{ .Values.message }}
+          - name: NAMESPACE
+            value: {{ .Values.namespace }}            
+        ports:
+        - containerPort: {{ .Values.containerPort }}
+      imagePullSecrets:
+      - name: regcred

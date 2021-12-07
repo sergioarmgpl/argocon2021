@@ -1,0 +1,8 @@
+# Default values for helm.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 3
+containerPort: 5000
+namespace: "dev"
+domain: "app.demo.domain.tld"
+changeCause: "changes"
