@@ -12,6 +12,9 @@ spec:
     path: helm
     repoURL: https://github.com/sergioarmgpl/argocon2021
     targetRevision: master
+    helm:
+      values: |
+        dockerImage: nginx
   syncPolicy:
     automated:
       prune: true
