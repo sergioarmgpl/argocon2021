@@ -15,7 +15,8 @@ spec:
     helm:
       values: |
         dockerImage: nginx
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+        namespace: apps
+#  syncPolicy:
+#    automated:
+#      prune: true
+#      selfHeal: true
