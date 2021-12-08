@@ -5,8 +5,8 @@ metadata:
   namespace: {{ .Values.namespace }}
 spec:
   schedule: "* * * * *"
-  concurrencyPolicy: "Replace"
-  startingDeadlineSeconds: 0
+#  concurrencyPolicy: "Replace"
+#  startingDeadlineSeconds: 0
   workflowSpec:
     workflowTemplateRef:
       name: whale-{{ .Values.appname }}
