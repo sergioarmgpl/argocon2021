@@ -3,8 +3,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: app1
-    app.kubernetes.io/instance: testargo
+    app: {{ .Values.appname }}
+    app.kubernetes.io/instance: app1
   name: app1-srv
   namespace: {{ .Values.namespace }}
 spec:
@@ -13,5 +13,6 @@ spec:
     protocol: TCP
     targetPort: {{ .Values.containerPort }}
   selector:
-    app: app1
-  type: ClusterIP
+    app: {{ .Values.appname }}
+  type: LoadBalancer
+#  type: ClusterIP

@@ -4,7 +4,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     ingress.kubernetes.io/rewrite-target: /
-  name: app1-ingress
+  name: {{ .Values.appname }}-ingress
   namespace: {{ .Values.namespace }}
 spec:
   rules:
@@ -12,5 +12,5 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: app1-srv
+              serviceName: {{ .Values.appname }}-srv
               servicePort: {{ .Values.containerPort }}

@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: apps
-    server: https://35.222.253.231:6443
+    server: https://35.226.59.246:6443
   project: default
   source:
     path: helm
@@ -14,7 +14,7 @@ spec:
     targetRevision: master
     helm:
       values: |
-        dockerImage: nginx
+        dockerImage: czdev/myapp
         namespace: apps
 #  syncPolicy:
 #    automated:

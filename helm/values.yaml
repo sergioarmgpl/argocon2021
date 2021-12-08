@@ -6,3 +6,4 @@ containerPort: 5000
 namespace: "dev"
 domain: "app.demo.domain.tld"
 changeCause: "changes"
+appname: "myapp1"
