@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp3
+  namespace: argocd
+spec:
+  destination:
+    namespace: apps
+    server: https://35.226.59.246:6443
+  project: default
+  source:
+    path: helm
+    repoURL: https://github.com/sergioarmgpl/argocon2021
+    targetRevision: master
+    helm:
+      values: |
+        replicaCount: 1
+        appname: myapp3
+        dockerImage: czdev/myapp
+        namespace: apps
+        node: node01
+        message: "Thanks for visit myapp3 at ArgoCon2021"
+#  syncPolicy:
+#    automated:
+#      prune: true
+#      selfHeal: true
