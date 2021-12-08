@@ -5,7 +5,7 @@ metadata:
   labels:
     app: {{ .Values.appname }}
     app.kubernetes.io/instance: app1
-  name: app1-srv
+  name: {{ .Values.appname }}-srv
   namespace: {{ .Values.namespace }}
 spec:
   ports:
