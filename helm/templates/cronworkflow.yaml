@@ -4,7 +4,9 @@ metadata:
   name: cron-wf-{{ .Values.appname }}
   namespace: {{ .Values.namespace }}
 spec:
-  schedule: "* * * * *"
+  schedule: "*/10 * * * *"
+  successfulJobsHistoryLimit: 3
+  suspend: false
 #  concurrencyPolicy: "Replace"
 #  startingDeadlineSeconds: 0
   workflowSpec:
