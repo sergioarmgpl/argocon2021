@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-app
+  name: myapp1
   namespace: argocd
 spec:
   destination:
@@ -14,8 +14,11 @@ spec:
     targetRevision: master
     helm:
       values: |
+        appname: myapp1
         dockerImage: czdev/myapp
         namespace: apps
+        node: node01
+        message: "Thanks for visit myapp1 at ArgoCon2021"
 #  syncPolicy:
 #    automated:
 #      prune: true

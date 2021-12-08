@@ -28,5 +28,7 @@ spec:
             value: {{ .Values.namespace }}            
         ports:
         - containerPort: {{ .Values.containerPort }}
+      nodeSelector:
+        kubernetes.io/hostname: {{ .Values.node }}
 #      imagePullSecrets:
 #      - name: regcred
