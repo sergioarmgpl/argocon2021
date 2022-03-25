@@ -14,6 +14,6 @@ spec:
   templates:
   - name: whalesay
     container:
-      image: tigerj/whalesay:latest
+      image: docker/whalesay #tigerj/whalesay:latest this is for ARM
       command: [cowsay]
       args: ["{{ .Values.message }}"]
