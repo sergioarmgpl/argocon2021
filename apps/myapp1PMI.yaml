@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp1pmi
+  namespace: argocd
+spec:
+  destination:
+    namespace: apps
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: helm
+    repoURL: https://github.com/sergioarmgpl/argocon2021
+    targetRevision: HEAD
+    helm:
+      values: |
+        appname: myapp1
+        dockerImage: czdev/myapp
+        namespace: apps
+        node: gke-pmi-gt-demo-default-pool-15498958-j8j4
+        message: "Thanks for visit myapp1 at PMI Guatemala Chapter awesome"
+  syncPolicy:
+    automated:
+      prune: true
+#      selfHeal: true
