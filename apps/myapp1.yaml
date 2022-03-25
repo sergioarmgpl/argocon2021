@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: apps
-    server: https://35.226.59.246:6443
+    server: https://kubernetes.default.svc
   project: default
   source:
     path: helm
@@ -17,8 +17,8 @@ spec:
         appname: myapp1
         dockerImage: czdev/myapp
         namespace: apps
-        node: node01
-        message: "Thanks for visit myapp1 at ArgoCon2021"
+        node: gke-pmi-gt-demo-default-pool-15498958-j8j4
+        message: "Thanks for visit myapp1 at PMI Guatemala Chapter"
 #  syncPolicy:
 #    automated:
 #      prune: true
