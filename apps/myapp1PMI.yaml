@@ -14,7 +14,7 @@ spec:
     targetRevision: HEAD
     helm:
       values: |
-        appname: myapp1
+        appname: myapp1pmi
         dockerImage: czdev/myapp
         namespace: apps
         node: gke-pmi-gt-demo-default-pool-15498958-j8j4
