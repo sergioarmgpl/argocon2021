@@ -19,7 +19,7 @@ spec:
         namespace: apps
         node: gke-pmi-gt-demo-default-pool-15498958-j8j4
         message: "Thanks for visit myapp1 at PMI Guatemala Chapter"
-#  syncPolicy:
-#    automated:
-#      prune: true
+  syncPolicy:
+    automated:
+      prune: true
 #      selfHeal: true
