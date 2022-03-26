@@ -18,7 +18,7 @@ spec:
         dockerImage: czdev/myapp
         namespace: apps
         node: gke-pmi-gt-demo-default-pool-15498958-j8j4
-        message: "Thanks for visit myapp1 at PMI Guatemala Chapter myapp3pmi"
+        message: "Thanks for visit myapp1 at PMI Guatemala Chapter myapp3pmi changed 123"
   syncPolicy:
     automated:
       prune: true
