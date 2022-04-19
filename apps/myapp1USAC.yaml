@@ -14,7 +14,7 @@ spec:
     targetRevision: HEAD
     helm:
       values: |
-        appname: myapp1pmi
+        appname: myapp1usac
         dockerImage: czdev/myapp
         namespace: apps
         node: gke-k8s-usac-default-pool-ea5dd824-zvr1
