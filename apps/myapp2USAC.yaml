@@ -18,7 +18,7 @@ spec:
         dockerImage: czdev/myapp
         namespace: apps
         node: gke-k8s-usac-default-pool-ea5dd824-zvr1
-        message: "Thanks for visit myapp2 USAC 2022 :)"
+        message: "Thanks for visit myapp2 USAC 2022 :("
   syncPolicy:
     automated:
       prune: true
