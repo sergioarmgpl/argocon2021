@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp1usac
+  namespace: argocd
+spec:
+  destination:
+    namespace: apps
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: helm
+    repoURL: https://github.com/sergioarmgpl/argocon2021
+    targetRevision: HEAD
+    helm:
+      values: |
+        appname: myapp1pmi
+        dockerImage: czdev/myapp
+        namespace: apps
+        node: gke-k8s-usac-default-pool-ea5dd824-zvr1
+        message: "Thanks for visit myapp1 USAC 2022"
+  syncPolicy:
+    automated:
+      prune: true
+#      selfHeal: true
